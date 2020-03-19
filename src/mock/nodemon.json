@@ -1,0 +1,19 @@
+{
+  "verbose": false,
+  "debug": false,
+  "exec": "node ./server/app.js",
+  "ignore": [
+    "node_modules",
+    "test",
+    "*.test.js",
+    "*.spec.js",
+    "test/**/*"
+  ],
+  "events": {
+    "restart": ""
+  },
+  "watch": ["./server", "./mock","package.json","tsconfig.json"],
+  "ext": "js",
+  "inspect": true,
+  "delay": "2500"
+}

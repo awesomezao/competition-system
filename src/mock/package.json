@@ -1,0 +1,20 @@
+{
+  "name": "mock-server-js",
+  "author": "zao",
+  "version": "0.0.1",
+  "main": "./server/index.js",
+  "scripts": {
+    "mock": "ts-node server/index.js",
+    "hot-mock": "nodemon --config nodemon.json"
+  },
+  "devDependencies": {
+    "koa": "^2.11.0",
+    "koa-router": "^7.4.0",
+    "mockjs": "^1.1.0",
+    "nodemon": "^2.0.2"
+  },
+  "dependencies": {
+    "koa-body": "^4.1.1",
+    "koa-bodyparser": "^4.2.1"
+  }
+}

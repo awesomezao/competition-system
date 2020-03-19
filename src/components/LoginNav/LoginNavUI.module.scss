@@ -1,0 +1,36 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+  li {
+    a {
+      width: 96px;
+      height: 13px;
+      font-size: 14px;
+      font-family: PingFang SC;
+      
+      color: rgba(91, 91, 91, 1);
+      line-height: 27px;
+    }
+
+    .active {
+      color: rgba(0, 160, 233, 1);
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        margin: 0 auto;
+        display: block;
+        width: 70%;
+        height: 3px;
+        background: rgba(0, 160, 233, 1);
+        border-radius: 1px;
+        left: 50%;
+        margin-left: -35%;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style: none;
+  }
+  a{
+    text-decoration: none;
+    &:hover {
+    color: inherit;
+  }
+  }
+
+  input:focus {
+    outline: none;
+    box-shadow: rgba(52, 71, 153, 0.2) 0 1px 5px 0px;
+  }
+  button{
+    cursor: pointer;
+    &:focus,
+    &:active:focus,
+    &.active:focus,
+    &.focus,
+    &:active.focus,
+    &.active.focus {
+      outline: none;
+      border-color: transparent; 
+      box-shadow: none;
+    }
+  }
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #FBF8FB;
+}
+
+html {
+  overflow: auto;
+  min-height: 101%;
+}
+
+html {
+  overflow: -moz-scrollbars-vertical;
+}

@@ -1,0 +1,65 @@
+@import '@/styles/global.size.scss';
+@import '@/styles/global.img.scss';
+
+.container {
+  width: $pageWidth;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left {
+  width: 443.5px;
+  height: 359.5px;
+  background: url($loginBac) no-repeat;
+  background-size: 443.5px 359.5px;
+  margin-top: 60px;
+  margin-left: 40px;
+}
+
+.right {
+  width: 301px;
+  margin-top: 48px;
+  margin-right: 100px;
+
+  .form {}
+
+  .other {
+    display: block;
+    width: 250px;
+    height: 22px;
+    position: relative;
+    text-align: center;
+    margin: 20px auto;
+    font-size:11px;
+    color:rgba(175, 175, 175, 1);
+    line-height:27px;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      width:75px;
+      height:1px;
+      background:rgba(206, 209, 209, 1);
+      border-radius:0px;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      width:75px;
+      height:1px;
+      background:rgba(206, 209, 209, 1);
+      border-radius:0px;
+      right: 0;
+    }
+  }
+
+  .wechat {
+    margin-top: 20px;
+    margin: 0 auto;
+  }
+}
