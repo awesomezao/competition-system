@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react'
 
 import Header from '@/components/Header'
+import Bottom from '@/components/Bottom'
 import { Iroute } from '@/utils/renderRoutes'
 
 import style from './BasicLayoutUI.module.scss'
@@ -14,7 +15,8 @@ function BasicLayout({route,children}: Props): ReactElement {
   return (
     <div>
       <Header/>
-      <div className={style.container}>{children}</div>
+      <div className={style.children}>{children}</div>
+      <Bottom className={style.bottom}/>
     </div>
   )
 }

@@ -1,0 +1,11 @@
+.form{
+  width: 300px;
+  margin-top: 25px;
+  &>div{
+    margin-bottom: 15px;
+  }
+  .btn{
+        display: block;
+        margin: 30px auto;
+  }
+}

@@ -52,6 +52,11 @@ const config: Iroute[] =
           ]
         },
         {
+          path: '/signup',
+          name: '注册',
+          component:lazy(()=>import('@/pages/Signup'))
+        },
+        {
           path: '/center',
           name: '个人中心',
           component: CenterLayout,

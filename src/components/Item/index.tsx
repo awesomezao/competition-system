@@ -4,10 +4,12 @@ interface Props {
   
 }
 
-export default function index({}: Props): ReactElement {
+function Item({}: Props): ReactElement {
   return (
     <div>
-      login
+      
     </div>
   )
 }
+
+export default Item

@@ -4,7 +4,7 @@ interface Props {
   
 }
 
-function index({}: Props): ReactElement {
+function Home({}: Props): ReactElement {
   return (
     <div>
       home
@@ -12,4 +12,4 @@ function index({}: Props): ReactElement {
   )
 }
 
-export default index
+export default Home
