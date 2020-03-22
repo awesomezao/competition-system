@@ -1,8 +1,10 @@
-import { lazy} from 'react';
+import { lazy, Component } from 'react';
 
-import BasicLayout from '@/layouts/BasicLayout';
+import BlankLayout from '@/layouts/BlankLayout'
+import BasicLayout from '@/layouts/BasicLayout'
 import LoginLayout from '@/layouts/LoginLayout'
-import CenterLayout from '@/layouts/CenterLayout';
+import CenterLayout from '@/layouts/CenterLayout'
+import RecruitLayout from '@/layouts/RecruitLayout'
 
 import { Iroute } from '@/utils/renderRoutes.tsx'
 
@@ -14,24 +16,65 @@ const config: Iroute[] =
       childRoutes: [
         {
           path: '/',
-          exact:true,
+          exact: true,
           name: '首页',
           component: lazy(() => import('@/pages/Home')),
         },
         {
           path: '/recruit',
           name: '招募人员',
-          component:lazy(()=>import('@/pages/Recruit'))
+          component: BlankLayout,
+          childRoutes: [
+            {
+              path: '/recruit',
+              exact: true,
+              name: '科研团队',
+              component: lazy(() => import('@/pages/Recruit')),
+            },
+            {
+              path: '/recruit/team',
+              name: '科研团队',
+              component: RecruitLayout,
+              childRoutes: [
+                {
+                  path: '/recruit/team',
+                  component: lazy(() => import('@/pages/Recruit/Team'))
+                }
+              ]
+            },
+            {
+              path: '/recruit/competition',
+              name: '竞赛报名',
+              component: RecruitLayout,
+              childRoutes: [
+                {
+                  path: '/recruit/competition',
+                  component: lazy(() => import('@/pages/Recruit/Competition')),
+                }
+              ]
+            },
+            {
+              path: '/recruit/student',
+              name: '学生组队',
+              component: RecruitLayout,
+              childRoutes: [
+                {
+                  path: '/recruit/student',
+                  component: lazy(() => import('@/pages/Recruit/Student')),
+                }
+              ]
+            },
+          ]
         },
         {
           path: '/awesome',
           name: '精彩幻灯',
-          component:lazy(()=>import('@/pages/Awesome'))
+          component: lazy(() => import('@/pages/Awesome'))
         },
         {
           path: '/related',
           name: '与我相关',
-          component:lazy(()=>import('@/pages/Related'))
+          component: lazy(() => import('@/pages/Related'))
         },
         {
           path: '/login',
@@ -40,21 +83,21 @@ const config: Iroute[] =
           childRoutes: [
             {
               path: '/login',
-              exact:true,
+              exact: true,
               name: '短信登陆/注册',
-              component:lazy(()=>import('@/pages/Login/Msg'))
+              component: lazy(() => import('@/pages/Login/Msg'))
             },
             {
               path: '/login/pwd',
               name: '密码登陆',
-              component:lazy(()=>import('@/pages/Login/Pwd'))
+              component: lazy(() => import('@/pages/Login/Pwd'))
             }
           ]
         },
         {
           path: '/signup',
           name: '注册',
-          component:lazy(()=>import('@/pages/Signup'))
+          component: lazy(() => import('@/pages/Signup'))
         },
         {
           path: '/center',
@@ -63,7 +106,7 @@ const config: Iroute[] =
           childRoutes: [
             {
               path: '/center',
-              exact:true,
+              exact: true,
               name: '个人资料',
               component: lazy(() => import('@/pages/Center/Info')),
             },

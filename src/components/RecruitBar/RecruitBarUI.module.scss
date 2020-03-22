@@ -1,0 +1,67 @@
+@import '@/styles/global.img.scss';
+
+.container {
+  .nav {
+    display: flex;
+    li{
+      margin: 0 40px;
+    }
+    .common {
+      a {
+        display: block;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 1);
+        background-size: 40px 48px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        color:rgba(91, 91, 91, 1);
+        font-size:10px;
+        &:hover{
+          box-shadow: 0px 0px 26px 8px rgba(118, 182, 255, 0.2);
+          span{
+            color:rgba(118, 182, 255, 1);
+          }
+        }
+        span{
+          display: block;
+          padding-top: 96px;
+          text-align: center;
+        }
+      }
+
+    }
+
+    .team {
+      @extend .common;
+
+      a {
+        background-image: url($team);
+      }
+
+    }
+
+    .competition {
+      @extend .common;
+
+      a {
+        background-image: url($competition);
+      }
+
+    }
+
+    .student {
+      @extend .common;
+
+      a {
+        background-image: url($student);
+      }
+
+    }
+
+    .active {
+      box-shadow: 0px 0px 26px 8px rgba(118, 182, 255, 0.2);
+    }
+  }
+}

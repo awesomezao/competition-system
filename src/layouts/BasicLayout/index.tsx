@@ -14,7 +14,7 @@ interface Props {
 function BasicLayout({route,children}: Props): ReactElement {
   return (
     <div>
-      <Header/>
+      <Header />
       <div className={style.children}>{children}</div>
       <Bottom className={style.bottom}/>
     </div>

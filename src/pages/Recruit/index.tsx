@@ -1,14 +1,16 @@
 import React, { ReactElement } from 'react'
 
+import RecruitBar from '@/components/RecruitBar'
+import style from './RecruitUI.module.scss'
+
 interface Props {
   
 }
 
 function Recruit({}: Props): ReactElement {
   return (
-    <div>
-      Recruit
-    </div>
+    
+      <RecruitBar className={style.container}/>
   )
 }
 

@@ -1,0 +1,39 @@
+.container {
+  width: 100%;
+  height:32px;
+  background:rgba(254, 254, 254, 1);
+  border-radius:5px;
+  display: flex;
+  padding-left: 11.5px;
+  // line-height: 32px;
+}
+
+.typeName {
+  font-size: 8px;
+  color: rgba(91, 91, 91, 1);
+  height:32px;
+  line-height: 32px;
+  margin-right: 33.5px;
+}
+
+.typeList {
+
+  .item {
+    @extend .typeName;
+    cursor: pointer;
+    &:hover{
+      color:rgba(29, 128, 211, 1);
+    }
+
+    & input {
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+  }
+.active {
+  @extend .item;
+  color:rgba(29, 128, 211, 1);
+}
+}
+

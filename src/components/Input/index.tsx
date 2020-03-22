@@ -11,10 +11,11 @@ interface Props {
   warn?: boolean; // input msg的警告
   bind?: any; // 双向绑定input事件
   className?: string;
+  readOnly?: boolean;
 }
 
 function Input(props: Props): ReactElement {
-  const { type,name, placeholder = '点击编辑内容', bind = {}, msg, warn = false } = props
+  const { type,name, placeholder = '点击编辑内容', bind = {}, msg, warn = false,readOnly=false } = props
   const [isShowPwd, setIsShowPwd] = useState(false)
 
   const toggleShowPwd = () => {
@@ -34,6 +35,7 @@ function Input(props: Props): ReactElement {
               'text' : 'password'
           }
           placeholder={placeholder}
+          readOnly={readOnly}
         />
       </label>
 

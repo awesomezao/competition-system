@@ -20,7 +20,7 @@ exports.myFavorite = Mock.mock({
       location: '科技会堂',
       startTime: '2019.10.12 14:00:00',
       closeTime: '2019.10.12 17:00:00',
-      img: '@image(240x107)'
+      img: '@image(190x85)'
     }
   ]
 });
@@ -29,7 +29,7 @@ exports.awesomeMeeings = Mock.mock({
     {
       'id|+1': 123,
       name: '2019华为校园招聘会|招聘类',
-      img: '@image(240x107)'
+      img: '@image(190x85)'
     }
   ]
 });
