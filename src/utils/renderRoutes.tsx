@@ -1,6 +1,8 @@
-import React from 'react'
+import React,{Suspense} from 'react'
 import ReactRouter, { Switch, Route, Redirect } from 'react-router-dom'
 import * as H from 'history';
+
+import LoadingPage from '@/components/LoadingPage'
 
 export interface Iroute extends ReactRouter.RouteProps {
   name?: string;
@@ -16,40 +18,43 @@ const renderRoutes = (routes: Iroute[], extraProps: any = {}, switchProps: React
     return null
   }
   return (
-    <Switch {...switchProps}>
-      {routes.map((route, i) => {
-        if (route.redirect) {
+    <Suspense fallback={<LoadingPage />}>
+      <Switch {...switchProps}>
+        {routes.map((route, i) => {
+          if (route.redirect) {
+            return (
+              <Redirect
+                key={route.path || i}
+                exact={route.exact}
+                strict={route.strict}
+                from={route.path}
+                to={route.redirect}
+              />
+            )
+          }
           return (
-            <Redirect
+            <Route
               key={route.path || i}
+              path={route.path}
               exact={route.exact}
               strict={route.strict}
-              from={route.path}
-              to={route.redirect}
-            />
-          )
-        }
-        return (
-          <Route
-            key={route.path || i}
-            path={route.path}
-            exact={route.exact}
-            strict={route.strict}
-            render={(props) => {
-              const renderChildRoutes = route.childRoutes ? renderRoutes(route.childRoutes) : null;
-              if (route.component) {
-                return (
+              render={(props) => {
+                const renderChildRoutes = route.childRoutes ? renderRoutes(route.childRoutes) : null;
+                if (route.component) {
+                  return (
                     <route.component {...props} {...extraProps} route={route}>
                       {renderChildRoutes}
                     </route.component>
-                )
-              }
-              return renderChildRoutes
-            }}
-          />
-        )
-      })}
-    </Switch>
+                  )
+                }
+                return renderChildRoutes
+              }}
+            />
+          )
+        })}
+      </Switch>
+    </Suspense>
+
   )
 }
 
