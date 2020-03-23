@@ -1,10 +1,10 @@
 import {
-  useState,
-  useRef,
-  useCallback,
   Dispatch,
+  MutableRefObject,
   SetStateAction,
-  MutableRefObject
+  useCallback,
+  useRef,
+  useState,
 } from 'react';
 
 const useRefState = <T>(

@@ -6,8 +6,9 @@
  * TODO: 记得添加样式
  */
 
-import React, { ReactElement } from 'react'
-import { NavLink } from 'react-router-dom'
+import React, { ReactElement } from 'react';
+
+import { NavLink } from 'react-router-dom';
 
 interface Props {
 

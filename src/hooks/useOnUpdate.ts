@@ -1,4 +1,7 @@
-import { useEffect, useRef } from 'react';
+import {
+  useEffect,
+  useRef,
+} from 'react';
 
 const useOnUpdate=(fn: () => void, dep?: any[])=> {
   const ref = useRef({ fn, mounted: false });

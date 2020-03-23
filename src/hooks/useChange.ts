@@ -1,4 +1,7 @@
-import {useCallback,useState} from 'react'
+import {
+  useCallback,
+  useState,
+} from 'react';
 
 const useChange=<S>(initial: S | (() => S))=> {
   const [value, setValue] = useState(initial);

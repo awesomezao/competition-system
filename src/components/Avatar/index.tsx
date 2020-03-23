@@ -5,10 +5,12 @@
  * @ Description: 头像组件，主要用于在表单输入时起到头像实时预览和上传数据的作用
  */
 
-import React, { ReactElement, useState, SyntheticEvent } from 'react'
+import React, {
+  ReactElement,
+  useState,
+} from 'react';
 
-import { useOnUpdate } from '@/hooks'
-import style from './AvatarUI.module.scss'
+import style from './AvatarUI.module.scss';
 
 interface Props {
   msg: string;

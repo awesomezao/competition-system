@@ -1,11 +1,11 @@
-import React, { ReactElement } from 'react'
+import React, { ReactElement } from 'react';
 
-import Input from '@/components/Input'
-import Textarea from '@/components/Textarea'
-import UploadInput from '@/components/UploadInput'
-import Button from '@/components/Button'
+import Button from '@/components/Button';
+import Input from '@/components/Input';
+import Textarea from '@/components/Textarea';
+import UploadInput from '@/components/UploadInput';
 
-import style from './TeamUI.module.scss'
+import style from './TeamUI.module.scss';
 
 interface Props {
   

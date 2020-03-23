@@ -1,7 +1,7 @@
-import { AxiosRequestConfig } from 'axios'
-import { message } from 'antd'
+import { message } from 'antd';
+import { AxiosRequestConfig } from 'axios';
 
-import instance from './instance'
+import instance from './instance';
 
 interface Iopt extends AxiosRequestConfig {
   ifHandleError?: boolean; // 统一处理错误

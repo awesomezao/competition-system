@@ -5,7 +5,12 @@
  * @ Description: 可以在设置回调后取得最新的state值
  */
 
-import { useEffect, useRef, MutableRefObject } from 'react';
+import {
+  MutableRefObject,
+  useEffect,
+  useRef,
+} from 'react';
+
 import useRefState from './useRefState';
 
 const useCBState = <T>(

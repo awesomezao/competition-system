@@ -1,12 +1,11 @@
-import { lazy, Component } from 'react';
+import { lazy } from 'react';
 
-import BlankLayout from '@/layouts/BlankLayout'
-import BasicLayout from '@/layouts/BasicLayout'
-import LoginLayout from '@/layouts/LoginLayout'
-import CenterLayout from '@/layouts/CenterLayout'
-import RecruitLayout from '@/layouts/RecruitLayout'
-
-import { Iroute } from '@/utils/renderRoutes.tsx'
+import BasicLayout from '@/layouts/BasicLayout';
+import BlankLayout from '@/layouts/BlankLayout';
+import CenterLayout from '@/layouts/CenterLayout';
+import LoginLayout from '@/layouts/LoginLayout';
+import RecruitLayout from '@/layouts/RecruitLayout';
+import { Iroute } from '@/utils/renderRoutes.tsx';
 
 const config: Iroute[] =
   [

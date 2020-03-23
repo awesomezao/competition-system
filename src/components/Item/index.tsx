@@ -5,13 +5,20 @@
  * @ Description: 全局各个单项比赛，发布的消息item
  */
 
-import React, { ReactElement, useState } from 'react'
-import { useImmer } from 'use-immer'
-import { StarOutlined, ClockCircleOutlined } from '@ant-design/icons'
+import React, {
+  ReactElement,
+  useState,
+} from 'react';
 
-import Button from '@/components/Button'
+import { useImmer } from 'use-immer';
 
-import style from './ItemUI.module.scss'
+import Button from '@/components/Button';
+import {
+  ClockCircleOutlined,
+  StarOutlined,
+} from '@ant-design/icons';
+
+import style from './ItemUI.module.scss';
 
 export interface Iitem {
   src: string;

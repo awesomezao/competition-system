@@ -1,8 +1,8 @@
-import React, { ReactElement } from 'react'
+import React, { ReactElement } from 'react';
 
-import SelectBar from '@/components/SelectBar'
-import Item from '@/components/Item' 
-import SystemMsg from '@/components/SystemMsg'
+import Item from '@/components/Item';
+import SelectBar from '@/components/SelectBar';
+import SystemMsg from '@/components/SystemMsg';
 
 interface Props {
   

@@ -1,4 +1,7 @@
-import { useEffect, useRef } from 'react'
+import {
+  useEffect,
+  useRef,
+} from 'react';
 
 const useDebounce = (fn:()=>any, ms:number = 30, deps = []) => {
   let timeout = useRef<any>()

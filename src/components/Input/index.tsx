@@ -5,10 +5,17 @@
  * @ Description: 全局input，仅包含text和password，配合useOnChange使用
  */
 
-import React, { ReactElement, useState } from 'react'
+import React, {
+  ReactElement,
+  useState,
+} from 'react';
 
-import { EyeOutlined, EyeInvisibleOutlined } from '@ant-design/icons'
-import style from './InputUI.module.scss'
+import {
+  EyeInvisibleOutlined,
+  EyeOutlined,
+} from '@ant-design/icons';
+
+import style from './InputUI.module.scss';
 
 interface Props {
   type: 'text' | 'password';

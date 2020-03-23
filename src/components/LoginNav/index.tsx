@@ -5,10 +5,11 @@
  * @ Description: 登陆注册的导航
  */
 
-import React, { ReactElement } from 'react'
-import { NavLink } from 'react-router-dom'
+import React, { ReactElement } from 'react';
 
-import style from './LoginNavUI.module.scss'
+import { NavLink } from 'react-router-dom';
+
+import style from './LoginNavUI.module.scss';
 
 interface Props {
   className?: string;

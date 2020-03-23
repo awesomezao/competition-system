@@ -1,8 +1,7 @@
-import React, { ReactElement } from 'react'
+import React, { ReactElement } from 'react';
 
-import CenterNav from '@/components/CenterNav'
-
-import { Iroute } from '@/utils/renderRoutes'
+import CenterNav from '@/components/CenterNav';
+import { Iroute } from '@/utils/renderRoutes';
 
 interface Props {
   route: Iroute;

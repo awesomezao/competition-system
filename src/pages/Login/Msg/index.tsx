@@ -1,10 +1,16 @@
-import React, { ReactElement, useState } from 'react'
+import React, {
+  ReactElement,
+  useState,
+} from 'react';
 
-import Input from '@/components/LoginInput'
-import Button from '@/components/LoginButton'
-import { useCountDown, useOnUpdate } from '@/hooks'
+import Button from '@/components/LoginButton';
+import Input from '@/components/LoginInput';
+import {
+  useCountDown,
+  useOnUpdate,
+} from '@/hooks';
 
-import style from './MsgUI.module.scss'
+import style from './MsgUI.module.scss';
 
 interface Props {
 

@@ -6,11 +6,11 @@
  * TODO: 记得添加api和逻辑
  */
 
-import React, { ReactElement } from 'react'
+import React, { ReactElement } from 'react';
 
-import { Input } from 'antd'
+import { Input } from 'antd';
 
-import style from './SearchUI.module.scss'
+import style from './SearchUI.module.scss';
 
 interface Props {
   className?: string;

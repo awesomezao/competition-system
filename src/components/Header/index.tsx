@@ -6,11 +6,17 @@
  * TODO: 路由鉴权时记得设置头部li切换 登录/注册->个人中心
  */
 
-import React, { ReactElement, useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import React, {
+  ReactElement,
+  useState,
+} from 'react';
 
-import Search from '@/components/Search'
-import style from './HeaderUI.module.scss'
+import { NavLink } from 'react-router-dom';
+
+import Search from '@/components/Search';
+
+import style from './HeaderUI.module.scss';
+
 interface Props {
   className?: string;
 }

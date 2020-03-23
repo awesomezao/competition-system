@@ -1,11 +1,10 @@
-import React, { ReactElement } from 'react'
+import React, { ReactElement } from 'react';
 
-import LoginNav from '@/components/LoginNav'
-import Wechat from '@/pages/Login/Wechat'
+import LoginNav from '@/components/LoginNav';
+import Wechat from '@/pages/Login/Wechat';
+import { Iroute } from '@/utils/renderRoutes';
 
-import style from './LoginLayoutUI.module.scss'
-
-import { Iroute } from '@/utils/renderRoutes'
+import style from './LoginLayoutUI.module.scss';
 
 interface Props {
   route: Iroute;

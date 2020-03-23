@@ -1,13 +1,14 @@
-import React, { ReactElement,useState } from 'react'
+import React, {
+  ReactElement,
+  useState,
+} from 'react';
 
-import Input from '@/components/Input'
-import Avatar from '@/components/Avatar'
-import RadioGroup from '@/components/RadioGroup'
-import Button from '@/components/Button'
+import Avatar from '@/components/Avatar';
+import Button from '@/components/Button';
+import Input from '@/components/Input';
+import RadioGroup from '@/components/RadioGroup';
 
-import { useChange } from '@/hooks'
-
-import style from './SignupUI.module.scss'
+import style from './SignupUI.module.scss';
 
 interface Props {
 

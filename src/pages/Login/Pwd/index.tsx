@@ -1,9 +1,9 @@
-import React, { ReactElement } from 'react'
+import React, { ReactElement } from 'react';
 
-import Input from '@/components/LoginInput'
-import Button from '@/components/LoginButton'
+import Button from '@/components/LoginButton';
+import Input from '@/components/LoginInput';
 
-import style from './PwdUI.module.scss'
+import style from './PwdUI.module.scss';
 
 interface Props {
   

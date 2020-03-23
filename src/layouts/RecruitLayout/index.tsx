@@ -1,8 +1,9 @@
-import React, { ReactElement } from 'react'
+import React, { ReactElement } from 'react';
 
-import SystemMsg from '@/components/SystemMsg'
-import { Iroute } from '@/utils/renderRoutes'
-import style from './RecruitLayoutUI.module.scss'
+import SystemMsg from '@/components/SystemMsg';
+import { Iroute } from '@/utils/renderRoutes';
+
+import style from './RecruitLayoutUI.module.scss';
 
 interface Props {
   route: Iroute;

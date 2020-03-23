@@ -1,11 +1,12 @@
-import React, { ReactElement } from 'react'
-import { BrowserRouter as Router } from 'react-router-dom'
+import '@/styles/global.scss';
 
-import renderRoutes from '@/utils/renderRoutes'
-import routesConfig from './config'
-// import LoadingPage from '@/components/LoadingPage'
+import React, { ReactElement } from 'react';
 
-import '@/styles/global.scss'
+import { BrowserRouter as Router } from 'react-router-dom';
+
+import renderRoutes from '@/utils/renderRoutes';
+
+import routesConfig from './config';
 
 interface Props {
 

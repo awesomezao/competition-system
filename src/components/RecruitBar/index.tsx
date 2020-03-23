@@ -5,10 +5,11 @@
  * @ Description: 发布的导航bar
  */
 
-import React, { ReactElement } from 'react'
-import { NavLink } from 'react-router-dom'
+import React, { ReactElement } from 'react';
 
-import style from './RecruitBarUI.module.scss'
+import { NavLink } from 'react-router-dom';
+
+import style from './RecruitBarUI.module.scss';
 
 interface Props {
   className?: string;

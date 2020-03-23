@@ -1,8 +1,13 @@
-import axios, { AxiosInstance, AxiosRequestConfig, AxiosError, AxiosResponse } from 'axios'
-import qs from 'qs'
-import { message } from 'antd'
+import { message } from 'antd';
+import axios, {
+  AxiosError,
+  AxiosInstance,
+  AxiosRequestConfig,
+  AxiosResponse,
+} from 'axios';
+import qs from 'qs';
 
-import { checkStatus } from '@/utils'
+import { checkStatus } from '@/utils';
 
 const instance: AxiosInstance = axios.create({
   timeout: 15000,

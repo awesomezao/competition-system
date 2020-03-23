@@ -1,4 +1,3 @@
-import { get, post } from './methods';
-import * as URL from './config';
+import { get } from './methods';
 
 export const login = ()=>get('/login')

@@ -5,9 +5,9 @@
  * @ Description: 页面底部，可添加版权信息
  */
 
-import React, { ReactElement } from 'react'
+import React, { ReactElement } from 'react';
 
-import style from './BottomUI.module.scss'
+import style from './BottomUI.module.scss';
 
 interface Props {
   className?: string;

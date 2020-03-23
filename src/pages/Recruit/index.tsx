@@ -1,7 +1,8 @@
-import React, { ReactElement } from 'react'
+import React, { ReactElement } from 'react';
 
-import RecruitBar from '@/components/RecruitBar'
-import style from './RecruitUI.module.scss'
+import RecruitBar from '@/components/RecruitBar';
+
+import style from './RecruitUI.module.scss';
 
 interface Props {
   

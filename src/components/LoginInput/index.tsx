@@ -5,10 +5,17 @@
  * @ Description: 登陆input组件
  */
 
-import React, { ReactElement, useState } from 'react'
+import React, {
+  ReactElement,
+  useState,
+} from 'react';
 
-import { EyeOutlined, EyeInvisibleOutlined } from '@ant-design/icons'
-import style from './InputUI.module.scss'
+import {
+  EyeInvisibleOutlined,
+  EyeOutlined,
+} from '@ant-design/icons';
+
+import style from './InputUI.module.scss';
 
 interface Props {
   type: 'text' | 'password';

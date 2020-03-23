@@ -1,8 +1,13 @@
-import React,{Suspense} from 'react'
-import ReactRouter, { Switch, Route, Redirect } from 'react-router-dom'
-import * as H from 'history';
+import React, { Suspense } from 'react';
 
-import LoadingPage from '@/components/LoadingPage'
+import * as H from 'history';
+import ReactRouter, {
+  Redirect,
+  Route,
+  Switch,
+} from 'react-router-dom';
+
+import LoadingPage from '@/components/LoadingPage';
 
 export interface Iroute extends ReactRouter.RouteProps {
   name?: string;

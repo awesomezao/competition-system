@@ -6,9 +6,7 @@
  * TODO: 记得完成逻辑编写
  */
 
-import React, { ReactElement } from 'react'
-
-import Input from '@/components/Input'
+import React, { ReactElement } from 'react';
 
 interface Props {
 
