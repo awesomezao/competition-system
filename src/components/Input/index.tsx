@@ -1,3 +1,10 @@
+/**
+ * @ Author: zao
+ * @ Create Time: 2020-03-20
+ * @ Modified by: zao
+ * @ Description: 全局input，仅包含text和password，配合useOnChange使用
+ */
+
 import React, { ReactElement, useState } from 'react'
 
 import { EyeOutlined, EyeInvisibleOutlined } from '@ant-design/icons'
@@ -15,7 +22,7 @@ interface Props {
 }
 
 function Input(props: Props): ReactElement {
-  const { type,name, placeholder = '点击编辑内容', bind = {}, msg, warn = false,readOnly=false } = props
+  const { type, name, placeholder = '点击编辑内容', bind = {}, msg, warn = false, readOnly = false } = props
   const [isShowPwd, setIsShowPwd] = useState(false)
 
   const toggleShowPwd = () => {

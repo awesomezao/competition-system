@@ -8,7 +8,7 @@ import style from './BasicLayoutUI.module.scss'
 
 interface Props {
   route: Iroute;
-  children: ReactElement;
+  children: React.ReactNode;
 }
 
 function BasicLayout({route,children}: Props): ReactElement {

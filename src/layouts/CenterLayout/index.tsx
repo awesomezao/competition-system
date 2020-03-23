@@ -6,7 +6,7 @@ import { Iroute } from '@/utils/renderRoutes'
 
 interface Props {
   route: Iroute;
-  children: ReactElement;
+  children: React.ReactNode;
 }
 
 function CenterLayout({ route, children }: Props): ReactElement {

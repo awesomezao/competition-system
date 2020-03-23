@@ -1,3 +1,10 @@
+/**
+ * @ Author: zao
+ * @ Create Time: 2020-03-20
+ * @ Modified by: zao
+ * @ Description: RadioGroup主要用于性别input选项
+ */
+
 import React, { ReactElement } from 'react'
 
 import style from './RadioGroupUI.module.scss'

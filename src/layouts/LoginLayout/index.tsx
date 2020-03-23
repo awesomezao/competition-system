@@ -9,7 +9,7 @@ import { Iroute } from '@/utils/renderRoutes'
 
 interface Props {
   route: Iroute;
-  children: ReactElement;
+  children: React.ReactNode;
 }
 
 function BasicLayout({ route, children }: Props): ReactElement {

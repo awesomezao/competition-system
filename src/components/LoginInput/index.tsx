@@ -1,3 +1,10 @@
+/**
+ * @ Author: zao
+ * @ Create Time: 2020-03-19
+ * @ Modified by: zao
+ * @ Description: 登陆input组件
+ */
+
 import React, { ReactElement, useState } from 'react'
 
 import { EyeOutlined, EyeInvisibleOutlined } from '@ant-design/icons'
@@ -18,7 +25,7 @@ interface Props {
 }
 
 function Input(props: Props): ReactElement {
-  const { type, placeholder, bind = {}, isOnEye = false, hasBtn = false, btnValue = '', btnCallback,btnStatus=false,msg,warn=false } = props
+  const { type, placeholder, bind = {}, isOnEye = false, hasBtn = false, btnValue = '', btnCallback, btnStatus = false, msg, warn = false } = props
   const [snapHolderValue, setSnapHolderValue] = useState(placeholder)
   const [isFocus, setIsFocus] = useState(false)
   const [snapIsOnEye] = useState(isOnEye)
@@ -62,7 +69,7 @@ function Input(props: Props): ReactElement {
         className={btnStatus ? style.disabled : style.btn}
         disabled={btnStatus}
         onClick={btnCallback}>{btnValue}</button>) : null}
-      <span className={warn?style.warn:style.msg}>{msg}</span>
+      <span className={warn ? style.warn : style.msg}>{msg}</span>
     </div>
   )
 }

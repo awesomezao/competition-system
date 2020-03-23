@@ -1,20 +1,19 @@
-import {AxiosRequestConfig} from 'axios'
-import {message} from 'antd'
+import { AxiosRequestConfig } from 'axios'
+import { message } from 'antd'
 
 import instance from './instance'
 
-interface Iopt extends AxiosRequestConfig{
+interface Iopt extends AxiosRequestConfig {
   ifHandleError?: boolean; // 统一处理错误
 }
 
-// TODO: remember to set production env 
 const isDev = process.env.NODE_ENV === 'development'
 const envUrl = () => {
-  return isDev?'/api':''
+  return isDev ? '/api' : ''
 }
 
 const request = async (opt: Iopt) => {
-  const options:Iopt = {
+  const options: Iopt = {
     method: 'get',
     ifHandleError: true,
     ...opt
@@ -26,24 +25,24 @@ const request = async (opt: Iopt) => {
     //   message.error(res)
     // }
     return res
-  } catch(err){
+  } catch (err) {
     if (options.ifHandleError) {
-      message.error(err.message||err.msg||'请求失败!')
+      message.error(err.message || err.msg || '请求失败!')
     }
     return err
   }
 }
 
-export const get = (url:string,opt?:Iopt) => {
+export const get = (url: string, opt?: Iopt) => {
   return request({
     method: 'GET',
     url,
     params: opt?.params,
-    headers:opt?.headers
+    headers: opt?.headers
   })
 }
-export const post = (url:string,opt ?: Iopt)=> {
+export const post = (url: string, opt?: Iopt) => {
   return request({
-    method:'post'
+    method: 'post'
   })
 }

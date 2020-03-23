@@ -6,7 +6,7 @@ import style from './RecruitLayoutUI.module.scss'
 
 interface Props {
   route: Iroute;
-  children: ReactElement;
+  children: React.ReactNode;
 }
 
 function RecruitLayout({children}: Props): ReactElement {

@@ -1,3 +1,11 @@
+/**
+ * @ Author: zao
+ * @ Create Time: 2020-03-22
+ * @ Modified by: zao
+ * @ Description: 主页类别选择组件
+ * TODO: remember to bind event
+ */
+
 import React, { ReactElement, useState } from 'react'
 
 import style from './SelectBarUI.module.scss'
@@ -8,9 +16,7 @@ interface Props {
   bind?: any;
 }
 
-
-// TODO:remember to bind event
-function SelectBar({name, typeList, bind }: Props): ReactElement {
+function SelectBar({ name, typeList, bind }: Props): ReactElement {
   const [typeTarget, setTypeTarget] = useState(typeList[0])
   const handleChange = (e: any) => {
     // bind(e.target.value)
@@ -23,7 +29,7 @@ function SelectBar({name, typeList, bind }: Props): ReactElement {
         {typeList.map((item) => (
           <label className={typeTarget === item ? style.active : style.item} key={item}>
             {item}
-            <input type="radio" name={name} value={item}/>
+            <input type="radio" name={name} value={item} />
           </label>
         ))}
       </div>

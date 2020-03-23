@@ -1,10 +1,18 @@
-import React, { ReactElement,useState } from 'react'
+/**
+ * @ Author: zao
+ * @ Create Time: 2020-03-23
+ * @ Modified by: zao
+ * @ Description: 封装的antd的上传文件组件
+ * TODO: remember to change the action url
+ */
+
+import React, { ReactElement, useState } from 'react'
 
 import { Upload } from 'antd';
 
 import style from './UploadInputUI.module.scss'
 
-interface Ifile{
+interface Ifile {
   uid: string;      // 文件唯一标识，建议设置为负数，防止和内部产生的 id 冲突
   name: string;   // 文件名
   status: 'uploading|error|done|removed'; // 状态有：uploading done error removed
@@ -14,11 +22,11 @@ interface Ifile{
 interface Props {
   name: string;
 }
-// TODO:remember to change the action url
-function UploadInput({name }: Props): ReactElement {
+// 
+function UploadInput({ name }: Props): ReactElement {
   const [fileList, setFileList] = useState<any>()
 
-  const handleChange = (e:any) => {
+  const handleChange = (e: any) => {
     let fileList = [...e.fileList];
     // fileList = fileList.slice(-2);
 

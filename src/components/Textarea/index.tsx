@@ -1,3 +1,10 @@
+/**
+ * @ Author: zao
+ * @ Create Time: 2020-03-22
+ * @ Modified by: zao
+ * @ Description: 全局textarea组件
+ */
+
 import React, { ReactElement, useState } from 'react'
 
 import style from './TextareaUI.module.scss'
@@ -13,7 +20,7 @@ interface Props {
 }
 
 function Textarea(props: Props): ReactElement {
-  const {  name, placeholder = '点击编辑内容', bind = {}, msg, warn = false,readOnly=false } = props
+  const { name, placeholder = '点击编辑内容', bind = {}, msg, warn = false, readOnly = false } = props
 
   return (
     <div className={`${style.container} ${props.className}`}>

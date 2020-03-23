@@ -1,3 +1,10 @@
+/**
+ * @ Author: zao
+ * @ Create Time: 2020-03-22
+ * @ Modified by: zao
+ * @ Description: 发布的导航bar
+ */
+
 import React, { ReactElement } from 'react'
 import { NavLink } from 'react-router-dom'
 
@@ -7,7 +14,7 @@ interface Props {
   className?: string;
 }
 
-function RecruitBar({className }: Props): ReactElement {
+function RecruitBar({ className }: Props): ReactElement {
   return (
     <div className={`${className} ${style.container}`}>
       <nav className={style.nav}>

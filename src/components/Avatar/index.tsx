@@ -1,3 +1,10 @@
+/**
+ * @ Author: zao
+ * @ Create Time: 2020-03-20
+ * @ Modified by: zao
+ * @ Description: 头像组件，主要用于在表单输入时起到头像实时预览和上传数据的作用
+ */
+
 import React, { ReactElement, useState, SyntheticEvent } from 'react'
 
 import { useOnUpdate } from '@/hooks'
@@ -9,7 +16,7 @@ interface Props {
   className?: string;
 }
 
-function Avatar({ msg, bind,className }: Props): ReactElement {
+function Avatar({ msg, bind, className }: Props): ReactElement {
   const [avatar, setAvatar] = useState('')
   const uploadImg = (e: any) => {
     const files = e.target.files;
