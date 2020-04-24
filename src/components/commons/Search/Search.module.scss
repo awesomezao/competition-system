@@ -1,0 +1,37 @@
+.wrapper {
+  width: 100%;
+  height: 50px;
+  background: rgba(255, 255, 255, 1);
+  border-top: 1px solid rgba(238, 238, 238, 1);
+  box-shadow: 2px 2px 19px 0px rgba(0, 204, 255, 0.1);
+  transition: height .3s linear;
+
+  .container {
+    width: 960px;
+    height: 50px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .show {
+      width: 330px;
+      margin: 0 auto;
+      transition: all .3s linear;
+    }
+  }
+
+}
+
+
+.hideWrapper {
+  @extend .wrapper;
+  height: 0px;
+  transition: height .3s linear;
+
+  .show {
+    transform: translateY(-50px);
+    display:none;
+    transition: transform .3s linear;
+  }
+}

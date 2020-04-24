@@ -6,11 +6,32 @@ import {
 const useChange=<S>(initial: S | (() => S))=> {
   const [value, setValue] = useState(initial);
   const onChange = useCallback(e => setValue(e.target.value), []);
+  const onFocus=useCallback(
+    (callback) => {
+      callback()
+    },
+    [],
+  )
+  const onBlur=useCallback(
+    (callback) => {
+      callback()
+    },
+    [],
+  )
+  const handleChange=useCallback(
+    (callback) => {
+      callback()
+    },
+    [],
+  )
+  
 
   return {
     value,
     setValue,
-    onChange,
+    onChange:handleChange,
+    onFocus,
+    onBlur,
     // 绑定到原生事件
     bindEvent: {
       onChange,

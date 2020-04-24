@@ -1,0 +1,30 @@
+.container {
+  padding: 25px;
+
+  .collapse {
+    background-color: inherit;
+    font-size: 12px;
+    color: rgba(91, 91, 91, 1);
+    width: 100%;
+  }
+
+}
+
+.msgHeader{
+  display: flex;
+  .msgDot{
+    width: 11px;
+    height: 11px;
+    background: url('~@/assets/images/dot@2x.png');
+    background-size: 11px 11px;
+    margin-right: 10px;
+  }
+  .msgContent{
+   max-width: 550px;
+   font-size: 12px;
+   color: rgba(91, 91, 91, 1);
+   overflow: hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+  }
+}

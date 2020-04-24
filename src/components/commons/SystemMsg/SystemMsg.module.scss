@@ -1,0 +1,33 @@
+.container {
+  width: 120px;
+  min-height: 150px;
+  max-width: 300px;
+  overflow-y: hidden;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: -1px 3px 30px 0px rgba(32, 32, 32, 0.06);
+  border-radius: 3px;
+
+  .title {
+    padding: 7.5px 0 12px 0;
+    font-size:9px;
+    color:rgba(91, 91, 91, 1);
+    text-align: center;
+  }
+
+  .msgList {
+
+    li {
+      cursor:pointer;
+      width:100px;
+      font-size:8px;
+      color:rgba(55, 55, 55, 1);
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      border-bottom: 1px solid rgba(235, 235, 235, 1);
+      padding-bottom: 7.5px;
+      margin-left: 13px;
+      margin-bottom:7.5px;
+    }
+  }
+}

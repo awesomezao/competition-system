@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  padding: 24px;
+  margin-top: 24px;
+  justify-content: space-between;
+
+  .left {}
+
+  .right {
+    width: 700px;
+    border-radius: 5px;
+    margin-left: 21px;
+    background: rgba(253, 253, 253, 1);
+    box-shadow: 0px 0px 30px 0px rgba(52, 52, 52, 0.04);
+  }
+}

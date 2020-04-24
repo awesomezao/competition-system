@@ -1,0 +1,115 @@
+.container {
+  position: relative;
+  // *{
+  //   outline: 1px solid;
+  // }
+}
+
+.label {
+  display: flex;
+
+  .name {
+    // display: block;
+    width: 25%;
+    overflow: hidden;
+    text-align: right;
+    white-space: nowrap;
+    line-height: 30px;
+    padding-right: 12.5px;
+    font-size: 12px;
+    color: rgba(91, 91, 91, 1);
+  }
+
+  .input {
+    width: 70%;
+    height: 100%;
+    min-height: 30px;
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(220, 220, 220, 1);
+    box-shadow: -1px 3px 30px 0px rgba(73, 73, 73, 0.08);
+    border-radius: 5px;
+    // padding-left: 10px;
+    text-align: center;
+    font-size: 10px;
+    line-height: 20px;
+
+    & input {
+      text-align: center;
+      font-size: 10px;
+      &::-webkit-input-placeholder {
+        font-size: 8px;
+        color: rgba(205, 205, 205, 1);
+      }
+    }
+
+    &::-webkit-input-placeholder {
+      font-size: 8px;
+      color: rgba(205, 205, 205, 1);
+    }
+
+    &:focus {
+      border: none;
+    }
+  }
+}
+
+
+
+.btn {
+  height: 24px;
+  line-height: 24px;
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(0, 160, 233, 1);
+  position: absolute;
+  top: 50%;
+  margin-top: -12px;
+  right: 8%;
+  background-color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+.disabled {
+  @extend .btn;
+  color: rgba(197, 197, 197, 1);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.eye {
+  line-height: 30px;
+  width: 14px;
+  position: absolute;
+  right: 8%;
+  cursor: pointer;
+}
+
+
+.msg {
+  display: block;
+  // height: 8px;
+  font-size: 7px;
+  font-weight: 400;
+  color: rgba(152, 151, 151, 1);
+  line-height: 20px;
+  margin-left: 25%;
+  padding-left: 9px;
+}
+
+.warn {
+  @extend .msg;
+  color: red;
+}
+
+.update {
+  margin-left: 25px;
+  cursor: pointer;
+  display: block;
+  width: 27px;
+
+  font-size: 12px;
+  text-decoration: underline;
+  color: rgba(61, 171, 255, 1);
+  line-height: 30px;
+}

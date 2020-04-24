@@ -2,3 +2,10 @@
 [0322/170455.252:ERROR:process_info.cc(556)] ReadMemoryInfo failed
 [0322/170455.252:ERROR:process_memory_win.cc(39)] Failed to initialize ProcessInfo.
 [0322/170455.252:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: 已尝试访问正在退出的过程。 (0xc000010a)
+[0406/200102.395:WARNING:minidump_to_upload_parameters.cc(36)] duplicate key guid, discarding value dd319262-18b0-40b9-a9d3-c9fe42d1e6fb
+[0414/175530.717:WARNING:minidump_to_upload_parameters.cc(36)] duplicate key guid, discarding value dd319262-18b0-40b9-a9d3-c9fe42d1e6fb
+[0414/210935.216:WARNING:minidump_to_upload_parameters.cc(36)] duplicate key guid, discarding value dd319262-18b0-40b9-a9d3-c9fe42d1e6fb
+[0415/002738.718:ERROR:process_reader_win.cc(126)] NtOpenThread: {澷朄??} ?掱涍?媮??堦?徾丆扐枹????尷丅 (0xc0000022)
+[0415/002738.718:ERROR:exception_snapshot_win.cc(98)] thread ID 720 not found in process
+[0415/163700.825:WARNING:minidump_to_upload_parameters.cc(36)] duplicate key guid, discarding value dd319262-18b0-40b9-a9d3-c9fe42d1e6fb
+[0421/170725.003:WARNING:minidump_to_upload_parameters.cc(36)] duplicate key guid, discarding value db7c7124-c744-4dfb-9153-f691b5701672

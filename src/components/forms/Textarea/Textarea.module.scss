@@ -1,0 +1,55 @@
+.container {}
+
+.label {
+  display: flex;
+
+  .name {
+    width: 25%;
+    overflow: hidden;
+    text-align: right;
+    white-space: nowrap;
+    line-height: 30px;
+    padding-right: 12.5px;
+    font-size: 12px;
+    color: rgba(91, 91, 91, 1);
+  }
+
+  textarea {
+    width: 70%;
+    height: 80px;
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(220, 220, 220, 1);
+    box-shadow: -1px 3px 30px 0px rgba(73, 73, 73, 0.08);
+    border-radius: 5px;
+    // padding-left: 10px;
+    text-align: center;
+    font-size: 10px;
+    line-height: 20px;
+
+    &::-webkit-input-placeholder {
+      font-size: 8px;
+      color: rgba(205, 205, 205, 1);
+      line-height: 70px;
+    }
+
+    &:focus {
+      border: none;
+    }
+  }
+}
+
+.msg {
+    display: block;
+    // height: 8px;
+    font-size: 7px;
+    font-weight: 400;
+    color: rgba(152, 151, 151, 1);
+    line-height: 20px;
+    margin-left: 25%;
+    padding-left: 9px;
+}
+
+.warn {
+    @extend .msg;
+    color: red;
+}

@@ -1,0 +1,33 @@
+.container {
+  width: 700px;
+  
+  .bar {
+    margin-bottom: 12px;
+  }
+
+  .itemList {
+    height: 610px;
+    background: rgba(254, 254, 254, 1);
+    border-radius: 5px;
+    padding: 16.5px 16.5px 24px 16.5px;
+    display: flex;
+    flex-direction: column;
+
+    .list {
+      &>div {
+        float: left;
+        margin-right: 48px;
+        &:nth-child(3n+0){
+          margin-right: 0;
+        }
+        margin-bottom: 30px;
+      }
+    }
+
+    .pagination {
+      margin-top: 20px;
+      display: block;
+      text-align: center;
+    }
+  }
+}

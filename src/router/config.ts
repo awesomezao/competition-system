@@ -1,11 +1,20 @@
+/**
+ * @ Author: zao
+ * @ Create Time: 2020-03-18
+ * @ Modified by: zao
+ * @ Description: routes config
+ * TODO: remember to delete the comments
+ */
+
 import { lazy } from 'react';
 
 import BasicLayout from '@/layouts/BasicLayout';
 import BlankLayout from '@/layouts/BlankLayout';
 import CenterLayout from '@/layouts/CenterLayout';
 import LoginLayout from '@/layouts/LoginLayout';
+import MsgLayout from '@/layouts/MsgLayout';
 import RecruitLayout from '@/layouts/RecruitLayout';
-import { Iroute } from '@/utils/renderRoutes.tsx';
+import { Iroute } from '@/utils/renderRoutes';
 
 const config: Iroute[] =
   [
@@ -17,12 +26,33 @@ const config: Iroute[] =
           path: '/',
           exact: true,
           name: '首页',
-          component: lazy(() => import('@/pages/Home')),
+          component: MsgLayout,
+          childRoutes: [
+            {
+              path: '/',
+              exact: true,
+              component: lazy(() => import('@/pages/Home')),
+            },
+          ]
+        },
+        {
+          path: '/info/:meetingId',
+          exact: true,
+          component: RecruitLayout,
+          childRoutes: [
+            {
+              path: '/info/:meetingId',
+              exact: true,
+              name: '会议详情',
+              component: lazy(() => import('@/pages/Home/Info')),
+            }
+          ]
         },
         {
           path: '/recruit',
           name: '招募人员',
           component: BlankLayout,
+          requireAuth: true,
           childRoutes: [
             {
               path: '/recruit',
@@ -41,17 +71,17 @@ const config: Iroute[] =
                 }
               ]
             },
-            {
-              path: '/recruit/competition',
-              name: '竞赛报名',
-              component: RecruitLayout,
-              childRoutes: [
-                {
-                  path: '/recruit/competition',
-                  component: lazy(() => import('@/pages/Recruit/Competition')),
-                }
-              ]
-            },
+            // {
+            //   path: '/recruit/competition',
+            //   name: '竞赛报名',
+            //   component: RecruitLayout,
+            //   childRoutes: [
+            //     {
+            //       path: '/recruit/competition',
+            //       component: lazy(() => import('@/pages/Recruit/Competition')),
+            //     }
+            //   ]
+            // },
             {
               path: '/recruit/student',
               name: '学生组队',
@@ -65,14 +95,15 @@ const config: Iroute[] =
             },
           ]
         },
-        {
-          path: '/awesome',
-          name: '精彩幻灯',
-          component: lazy(() => import('@/pages/Awesome'))
-        },
+        // {
+        //   path: '/awesome',
+        //   name: '精彩幻灯',
+        //   component: lazy(() => import('@/pages/Awesome'))
+        // },
         {
           path: '/related',
           name: '与我相关',
+          requireAuth: true,
           component: lazy(() => import('@/pages/Related'))
         },
         {
@@ -101,6 +132,7 @@ const config: Iroute[] =
         {
           path: '/center',
           name: '个人中心',
+          requireAuth: true,
           component: CenterLayout,
           childRoutes: [
             {

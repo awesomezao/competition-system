@@ -1,7 +1,8 @@
 import React, { ReactElement } from 'react';
 
-import CenterNav from '@/components/CenterNav';
+import CenterBar from '@/components/bars/CenterBar';
 import { Iroute } from '@/utils/renderRoutes';
+import style from './CenterLayout.module.scss'
 
 interface Props {
   route: Iroute;
@@ -10,9 +11,9 @@ interface Props {
 
 function CenterLayout({ route, children }: Props): ReactElement {
   return (
-    <div>
-      <CenterNav/>
-      <div>{children}</div>
+    <div className={style.container}>
+      <CenterBar className={style.left}/>
+      <div className={style.right}>{children}</div>
     </div>
   )
 }

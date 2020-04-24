@@ -11,12 +11,21 @@ const devServerConfig = () => config => {
   return {
     ...config,
     compress: true,
+    // proxy: {
+    //   '/api/**': {
+    //     target: 'http://localhost:3001',
+    //     changeOrigin: true,
+    //     pathRewrite: {
+    //       '^/api': ''
+    //     }
+    //   }
+    // }
     proxy: {
-      '/api/**': {
-        target: 'http://localhost:3001',
+      '/meeting-v2/**': {
+        target: 'http://www.ljhhhx.com:8080',
         changeOrigin: true,
         pathRewrite: {
-          '^/api': ''
+          '^/meeting-v2': '/meeting-v2'
         }
       }
     }

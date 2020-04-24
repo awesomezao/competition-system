@@ -7,6 +7,7 @@ export interface Idata {
 }
 
 export default function checkStatus(response: AxiosResponse<any>) {
+
   const status = response.status || -1000;
   if ((status >= 200 && status < 300) || status === 304) {
     return response.data 

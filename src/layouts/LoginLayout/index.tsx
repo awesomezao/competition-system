@@ -1,10 +1,10 @@
 import React, { ReactElement } from 'react';
 
-import LoginNav from '@/components/LoginNav';
+import LoginNav from '@/components/login/LoginBar';
 import Wechat from '@/pages/Login/Wechat';
 import { Iroute } from '@/utils/renderRoutes';
 
-import style from './LoginLayoutUI.module.scss';
+import style from './LoginLayout.module.scss';
 
 interface Props {
   route: Iroute;
@@ -22,7 +22,7 @@ function BasicLayout({ route, children }: Props): ReactElement {
         <LoginNav />
         <div className={style.form}>{children}</div>
         <span className={style.other}>第三方登录</span>
-        <Wechat className={style.wechat}/>
+        <Wechat className={style.wechat} />
       </div>
 
     </div>

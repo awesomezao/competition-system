@@ -42,12 +42,28 @@ html {
 }
 
 body {
-  background-color: #FBF8FB;
-}
+  background-color: #FBF8FB!important;
+  &::-webkit-scrollbar {
+    width: .5rem;
+    height: 1rem;
+  }
 
+  &::-webkit-scrollbar-thumb {
+    // border-radius: .5rem;
+    box-shadow: inset 0 0 5px rgba(128, 125, 125, 0.2);
+    background: #afacac;
+  }
+
+  &::-webkit-scrollbar-track {
+    // box-shadow: inset 0 0 1px rgba(0, 0, 0, 0);
+    // border-radius: .4rem;
+    // background: #ccc;
+    background-color: transparent;
+  }
+}
 html {
   overflow: auto;
-  min-height: 101%;
+  // min-height: 101%;
 }
 
 html {

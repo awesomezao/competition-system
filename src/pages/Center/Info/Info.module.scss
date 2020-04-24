@@ -1,0 +1,37 @@
+.container {
+  width: 350px;
+  margin: 0 auto;
+  &>div{
+    margin-top: 20px;
+  }
+}
+
+.pwd {
+  padding-left: 30%;
+  h2 {
+    cursor: pointer;
+    font-size: 12px;
+    color: rgba(61, 171, 255, 1);
+    text-decoration: underline;
+    margin-bottom: 0;
+  }
+
+  span {
+    font-size: 7px;
+    color: rgba(152, 151, 151, 1);
+    // line-height:20px;
+  }
+
+}
+
+.fix{
+  &>div{
+    margin-bottom: 10px;
+  }
+}
+
+.btn{
+  display: block;
+  margin: 40px auto;
+  
+}

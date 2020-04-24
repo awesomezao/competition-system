@@ -1,0 +1,95 @@
+.container {
+  width: 100%;
+
+  input {
+    display: block;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+}
+
+.upload {
+  display: flex;
+  // outline: 1px solid;
+  width: 100%;
+
+  .name {
+    display: block;
+    width: 25%;
+    padding-right: 12.5px;
+    overflow: hidden;
+    font-size: 12px;
+    line-height: 30px;
+    color: rgba(91, 91, 91, 1);
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  .input {
+    display: inline-block;
+    width: 70%;
+    height: 100%;
+    min-height: 30px;
+    border: 1px solid rgba(220, 220, 220, 1);
+    border-radius: 5px;
+    font-size: 10px;
+    line-height: 20px;
+    line-height: 30px;
+    color: rgba(136, 136, 136, 1);
+    // padding-left: 10px;
+    text-align: center;
+    cursor: pointer;
+    background: rgba(216, 234, 235, 1);
+    box-shadow: -1px 3px 30px 0px rgba(73, 73, 73, 0.08);
+
+    &:hover {
+      filter: brightness(0.9);
+    }
+  }
+}
+
+
+.fileList {
+  padding-left: 25%;
+  margin-right: 5%;
+
+  li {
+    display: flex;
+    height: 25px;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+    line-height: 25px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: space-between;
+
+    &:hover {
+      background-color: rgba(216, 234, 235, 1);
+    }
+    
+    .color{
+      color: #1890ff;
+    }
+    .tt {
+      @extend .color;
+      line-height: 25px;
+      width: 80%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .actionBar {
+      width: 20%;
+      display: flex;
+      justify-content: space-between;
+
+      &>span {
+        display: block;
+      }
+
+    }
+  }
+}

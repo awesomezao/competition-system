@@ -1,0 +1,49 @@
+.route {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+// 帧动画
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-in;
+}
+
+/* 路由前进时的入场/离场动画 */
+.forward-enter {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.forward-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 500ms;
+}
+
+.forward-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.forward-exit-active {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 500ms;
+}

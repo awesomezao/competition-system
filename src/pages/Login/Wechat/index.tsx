@@ -1,6 +1,6 @@
-import React, { ReactElement } from 'react'
+import React, { ReactElement } from 'react';
 
-import style from './WechatUI.module.scss'
+import style from './Wechat.module.scss';
 
 interface Props {
   className?: string;

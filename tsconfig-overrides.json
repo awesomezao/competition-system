@@ -4,6 +4,7 @@
     "paths": {
       "@/*": ["src/*"],
       "~/*": ["src/assets/*"]
-    }
+    },
+   "allowSyntheticDefaultImports": true
   }
 }
