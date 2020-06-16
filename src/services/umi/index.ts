@@ -6,7 +6,7 @@ import {isUndefined,isNull} from 'lodash'
 const isDev = process.env.NODE_ENV === 'development'
 
 const envUrl = () => {
-  return isDev ? '/meeting-v2' : ''
+  return isDev ? '/meeting-v2' : '/apis'
 }
 
 // 统一处理错误

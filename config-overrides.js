@@ -2,7 +2,7 @@ const {
   override,
   addWebpackAlias,
   overrideDevServer,
-  fixBabelImports
+  fixBabelImports,
 } = require('customize-cra');
 const path = require('path');
 

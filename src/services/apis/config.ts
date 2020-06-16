@@ -21,8 +21,8 @@ export const _GET_USER_NOTIFICATION = '/getMessage'; // 获取用户通知操作
  * 用户与会议的交互接口
  */
 export const _GET_USER_CREATED_MEET_INFO = '/meetPreference/'; // 获取自己会议被参加、收藏、申请志愿者的详细信息，{type}路径，2为参加，3为收藏
-export const _GET_USER_RELATED_MEET = '/my/meet/'; // 获取与自己相关的会议信息,{type}路径,1为创建,2为参加,3为收藏
-export const _GET_MY_FAVORITE='/my/meet/3'
+export const _GET_USER_RELATED_MEET = '/meetings/my/'; // 获取与自己相关的会议信息,{type}路径,1为创建,2为参加,3为收藏
+export const _GET_MY_FAVORITE='/meetings/my/3'
 export const ATTEND_MEETING = '/preference/2'; // 参加会议
 export const FAVORITE_MEETING = '/preference/3'; // 收藏会议
 export const QUIT_MEETING = '/quit/'; //{meetingId}路径,{type}参数,2为参加，3为收藏

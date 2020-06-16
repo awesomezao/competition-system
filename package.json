@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "react-app-rewired build",
+    "build": "dotenv -e .env.production react-app-rewired build",
     "eject": "react-app-rewired eject",
     "start": "react-app-rewired start",
     "test": "react-app-rewired test"
@@ -39,6 +39,7 @@
     "antd": "^4.0.3",
     "axios": "^0.19.2",
     "babel-plugin-import": "^1.13.0",
+    "dotenv": "^8.2.0",
     "immer": "^6.0.2",
     "lodash": "^4.17.15",
     "node-sass": "^4.13.1",
@@ -54,6 +55,7 @@
   },
   "devDependencies": {
     "customize-cra": "^0.9.1",
+    "dotenv-cli": "^3.1.0",
     "react-app-rewired": "^2.1.5"
   }
 }
