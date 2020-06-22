@@ -18,7 +18,6 @@ import {
   useAuth,
   useChange,
   useCountDown,
-  useOnMount,
   useOnUpdate,
 } from '@/hooks';
 import {

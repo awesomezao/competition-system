@@ -17,7 +17,6 @@ import validate from '@/utils/validate'
 import { useImmer } from 'use-immer'
 import {verificationWaitTime} from '@/constant'
 
-
 import style from './Msg.module.scss';
 
 interface Props {

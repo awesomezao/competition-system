@@ -15,6 +15,7 @@ import authContainer from '@/store/auth';
 import {isUndefined} from 'lodash'
 import systemMsgContainer from '@/store/systemMsg'
 import routesConfig from './config';
+import { hot } from 'react-hot-loader'
 
 interface Props {
 
@@ -42,4 +43,4 @@ function App({ }: Props): ReactElement {
   )
 }
 
-export default App
+export default process.env.NODE_ENV === 'development' ? hot(module)(App) : App

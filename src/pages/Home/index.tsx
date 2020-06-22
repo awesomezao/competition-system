@@ -1,5 +1,3 @@
-// TODO: remember to set item total number
-
 import React, {
   ReactElement,
   useState,
@@ -23,7 +21,6 @@ import {
 
 
 import style from './Home.module.scss';
-import { useOnMount } from '@/hooks';
 
 interface Props {
 
@@ -80,6 +77,7 @@ function Home({ }: Props): ReactElement {
       }
     }
   })
+
   // 处理分页
   const handlePagination = async (page: number) => {
     setPage(page)
@@ -103,7 +101,6 @@ function Home({ }: Props): ReactElement {
     typeListR.cancel('cancel typeListR')
     
   })
-
   return (
     <div className={style.container}>
       <Spin spinning={typeListR.loading}>
