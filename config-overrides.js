@@ -24,17 +24,18 @@ const devServerConfig = () => config => {
     }
   }
 }
+const rewireHotLoader = () => config => {
+  config = rewireReactHotLoader(config, config.mode)
+  return config
+}
 
 module.exports = {
   webpack: override(
-    (config, env) => {
-      config = rewireReactHotLoader(config, env)
-      return config
-    },
+    rewireHotLoader(),
     addWebpackAlias({
       '@': appPath('src'),
       '~': appPath('src/assets'),
-      'react-dom':'@hot-loader/react-dom'
+      'react-dom': '@hot-loader/react-dom'
     }),
     fixBabelImports('import', {
       libraryName: 'antd',

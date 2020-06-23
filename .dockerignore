@@ -1,0 +1,13 @@
+/node_modules
+/public
+/src
+.env.production
+.gitignore
+.yarnrc
+config-overrides.js
+debug.log
+package.json
+README.md
+tsconfig.json
+tsconfig-overrides.json
+yarn.lock
