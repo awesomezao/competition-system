@@ -15,7 +15,7 @@ const devServerConfig = () => config => {
     compress: true,
     proxy: {
       '/meeting-v2/**': {
-        target: '额，这个就不能暴露了',
+        target: 'http://www.ljhhhx.com:8080',
         changeOrigin: true,
         pathRewrite: {
           '^/meeting-v2': '/meeting-v2'
