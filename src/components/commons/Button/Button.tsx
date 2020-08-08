@@ -10,7 +10,7 @@ import {Button} from 'antd'
 
 import style from './Button.module.scss';
 
-interface Props {
+interface Props{
   type?: 'button' | 'reset' | 'submit';
   value: string;
   className?: string;
