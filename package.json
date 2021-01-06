@@ -44,7 +44,7 @@
     "@types/react-transition-group": "^4.2.4",
     "@umijs/hooks": "^1.9.0",
     "antd": "^4.0.3",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "babel-plugin-import": "^1.13.0",
     "immer": "^6.0.2",
     "lodash": "^4.17.15",
