@@ -61,10 +61,12 @@
   },
   "devDependencies": {
     "@hot-loader/react-dom": "^16.13.0",
+    "babel-plugin-lodash": "^3.3.4",
     "compression-webpack-plugin": "^4.0.0",
     "customize-cra": "^0.9.1",
     "dotenv-cli": "^3.1.0",
     "hard-source-webpack-plugin": "^0.13.1",
+    "lodash-webpack-plugin": "^0.11.5",
     "pretty": "^2.0.0",
     "progress-bar-webpack-plugin": "^2.1.0",
     "react-app-rewire-hot-loader": "^2.0.1",
