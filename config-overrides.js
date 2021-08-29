@@ -6,9 +6,11 @@ const {
   disableEsLint,
   addWebpackPlugin,
   setWebpackOptimizationSplitChunks,
+  addWebpackModuleRule
 } = require('customize-cra');
 const path = require('path');
 const webpack = require('webpack')
+const LodashModuleReplacementPlugin = require('lodash-webpack-plugin')
 const ProgressBarPlugin = require("progress-bar-webpack-plugin");
 const rewireReactHotLoader = require('react-app-rewire-hot-loader')
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
@@ -63,7 +65,7 @@ const addSplitChunks = () => config => {
     cacheGroups: {
       vendor: {
         //第三方依赖
-        priority: 1, //设置优先级，首先抽离第三方模块
+        priority: 10, //设置优先级，首先抽离第三方模块
         name: 'vendor',
         test: /node_modules/,
         chunks: 'initial',
@@ -73,10 +75,12 @@ const addSplitChunks = () => config => {
       //缓存组
       common: {
         //公共模块
-        chunks: 'initial',
+        priority: 5,
+        chunks: 'all',
         name: 'common',
-        minSize: 100, //大小超过100个字节
-        minChunks: 3 //最少引入了3次
+        // minSize: 100, //大小超过100个字节
+        minChunks: 2, //最少引入了3次
+        enforce: true
       }
     }
   }
@@ -98,12 +102,20 @@ module.exports = {
       style: 'css',
     }),
     disableEsLint(),
-    addCompression(),
+    // addCompression(),
+    // addWebpackModuleRule({
+    //   test: /\.(ts|tsx)$/,
+    //   loader: 'babel-loader',
+    //   exclude: /node_modules/,
+    //   include: [appPath('src')],
+    //   options: { plugins: ['lodash'] }
+    // }),
     addAnalyzer(),
     addSplitChunks(),
     addWebpackPlugin(
       new ProgressBarPlugin(),
-      new HardSourcePlugin()
+      new HardSourcePlugin(),
+      new LodashModuleReplacementPlugin()
     )
   ),
   devServer: overrideDevServer(
